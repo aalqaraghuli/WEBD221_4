@@ -1,10 +1,14 @@
 <?php 
-  $page_title = "Studio new";
+  $page_title = "Studio New: Services";
   include 'header.php';
 ?>
 
-	<div id="promo">Blah blah blah</div>
-	<!-- /promo -->
+	<header>
+		<!-- carousel! -->
+		<h2>Welcome to Studio New</h2>
+		<h3>We create websites and stuff</h3>
+		<div id="promo">Blah blah blah</div>
+	</header><!-- /header -->
 
 	<section id="services">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
