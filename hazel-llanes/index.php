@@ -3,6 +3,12 @@
   include 'header.php';
 ?>
 
+	<header>
+		<!-- carousel! -->
+		<h2>Welcome to Studio New</h2>
+		<h3>We create websites and stuff</h3>
+	</header><!-- /header -->
+
 	<div id="promo">Blah blah blah</div>
 	<!-- /promo -->
 

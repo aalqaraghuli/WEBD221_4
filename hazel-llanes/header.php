@@ -19,9 +19,3 @@
 			<li><a href="#">Contact Us</a></li>
 		</ul>
 	</nav><!-- /nav -->
-
-	<header>
-		<!-- carousel! -->
-		<h2>Welcome to Studio New</h2>
-		<h3>We create websites and stuff</h3>
-	</header><!-- /header -->
