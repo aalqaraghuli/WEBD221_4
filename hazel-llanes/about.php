@@ -1,33 +1,44 @@
 <?php 
-  $page_title = "Studio New: About";
-  include 'header.php';
+$page_title = "Studio New - About";
+include 'header.php';
 ?>
 
-	<header>
-		<!-- carousel! -->
-		<h2>Welcome to Studio New</h2>
-		<h3>We create websites and stuff</h3>
-		<div id="promo">Blah blah blah</div>
-	</header><!-- /header -->
+<h2>Who We Are</h2>
+<p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio nihil impedit quo facilis est et expedita distinctio minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.</p>
+</div>
+</header><!-- /header -->
 
-	<section id="services">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-		<ul>
-			<li>Innovative Design</li>
-			<li>Clean Coding</li>
-			<li>Quick delivery</li>
-			<li>Best support</li>
-		</ul>		
-	</section><!-- /services -->
+<section class="content">
+	<div class="container">
+		<h3>About Us</h3>
+		<p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor  ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.  Lorem ipsum dolor       sit amet, consectetur adipisicing elit, sed do eiusmod tempor  ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor  ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.  </p>
+	</div>
+</section><!-- /about-->
 
-	<section id="recent">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua. </p>
-		<ul>
-			<li>Innovative Design</li>
-			<li>Clean Coding</li>
-			<li>Quick delivery</li>
-			<li>Best support</li>
+<section id="team" class="greybg">
+	<div class="container">
+		<h3>Our Team</h3>
+		<ul id="members" class="clearfix">
+			<li><i class="fa fa-th-list"></i><h4>Natalie</h4><span class="position">Project Manager</span><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua. </p></li>
+			<li><i class="fa fa-code"></i><h4>Natalie</h4><span class="position">Project Manager</span><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua. </p></li>
+			<li><i class="fa fa-location-arrow"></i><h4>Natalie</h4><span class="position">Project Manager</span><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua. </p></li>
+			<li><i class="fa fa-phone"></i><h4>Natalie</h4><span class="position">Project Manager</span><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua. </p></li>
+
 		</ul>
-	</section><!-- /recent -->
-	
+	</div>
+</section><!-- /team -->
+
+<section class="content">
+	<div class="container">
+		<div class="col">
+			<h3>Our Mission</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor  ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor  ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+		</div>
+		<div class="col">
+			<img src="img/mission-img.jpg" alt="mission photo">
+		</div>
+	</div>
+</section><!-- /mission-->
+
 <?php include "footer.php"; ?>

@@ -1,0 +1,393 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,400italic);
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: 0;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body {
+  font: 15px "Ubuntu", Myriad, Myriad Pro, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 26px;
+  background-color: #ffffff;
+  color: #9d9c9c;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+h3 {
+  display: inline-block;
+  font-size: 28px;
+  line-height: normal;
+  font-weight: 400;
+  padding: 0 0 0 0;
+  margin-bottom: 27px;
+  border-bottom: solid 2px #fe5c32;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  display: inline-block;
+}
+a {
+  color: #ffffff;
+}
+.fa {
+  color: #fe5c32;
+  font-size: 25px;
+}
+h2 {
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 38px;
+  line-height: 2em;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
+section,
+header,
+footer {
+  width: 100%;
+}
+header {
+  height: 490px;
+}
+header.home {
+  background: url('../img/banner-home.jpg') no-repeat;
+  background-size: cover;
+}
+header.about {
+  background: url('../img/banner-about.jpg') no-repeat;
+  background-size: cover;
+}
+header.services {
+  background: url('../img/banner-services.jpg') no-repeat;
+  background-size: cover;
+}
+#navbar {
+  background-color: #ffffff;
+  min-height: 90px;
+}
+#navbar .container {
+  padding: 35px 0;
+}
+#navbar ul {
+  float: right;
+}
+#navbar ul a {
+  font-size: 15px;
+  line-height: 12px;
+  font-weight: 500;
+  color: #414141;
+  padding: 0 15px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+#navbar ul a:hover {
+  color: #fe5c32;
+}
+#navbar ul a.current {
+  color: #fe5c32;
+}
+#navbar h1 {
+  float: left;
+  margin: 0;
+}
+#navbar h1 a {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+#navbar h1 a .brightE {
+  color: #fe5c32;
+}
+nav .fa-bars {
+  display: none;
+}
+.content {
+  padding: 55px 0 55px 0;
+  background-color: #ffffff;
+}
+.content ul li {
+  display: inline-block;
+  float: left;
+  width: 22.333333333333332%;
+  margin: 0 1.3333333333333335%;
+}
+#services li h4 {
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 300;
+  margin: 20px 0;
+}
+#services li p {
+  font-size: 12px;
+  line-height: 19px;
+  font-weight: 400;
+  text-align: left;
+  padding: 0 20px;
+}
+#recent li {
+  background-color: #eeeeee;
+  color: #414141;
+  text-align: right;
+  border: #e0dddd solid 1px;
+}
+#recent li span {
+  width: 90%;
+  display: block;
+  margin: 0 auto 15px auto;
+}
+#recent li h5 {
+  border-bottom: #e0dddd solid 1px;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  color: #fe5c32;
+}
+#recent li img {
+  width: 100%;
+  border-bottom: #e0dddd solid 1px;
+}
+.blurb {
+  font-size: 16px;
+  margin-bottom: 33px;
+}
+h3,
+h4 {
+  color: #414141;
+}
+#promo {
+  background-color: #fe5c32;
+  color: #ffffff;
+  font-size: 23px;
+}
+#promo a {
+  color: #ffffff;
+  border-bottom: #ffffff solid 1px;
+  text-transform: uppercase;
+}
+#promo a:hover {
+  color: #9d9c9c;
+  border-color: #9d9c9c;
+}
+.greybg {
+  background-color: #f6f6f6;
+}
+#team .position {
+  color: #414141;
+}
+#team li {
+  display: inline-block;
+  float: left;
+  width: 22.333333333333332%;
+  margin: 0 1.3333333333333335%;
+}
+.col {
+  display: inline-block;
+  float: left;
+  width: 47.333333333333336%;
+  margin: 0 1.3333333333333335%;
+  text-align: left;
+}
+.col h3 {
+  margin: 0;
+}
+#guarantee {
+  padding: 25px 0 25px 0;
+}
+footer {
+  color: #ffffff;
+  background-color: #fe5c32;
+}
+@media (max-width: 940px) {
+  .container {
+    padding: 40px 15px;
+  }
+  #topbar .container {
+    padding: 60px 15px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  .header {
+    padding: 145px 0;
+  }
+  #default-copy {
+    display: inline-block;
+    float: left;
+    width: 97.33333333333334%;
+    margin: 0 1.3333333333333335%;
+  }
+  #vid {
+    display: inline-block;
+    float: left;
+    width: 97.33333333333334%;
+    margin: 0 1.3333333333333335%;
+    margin-top: 50px;
+  }
+  #portfolio h3 {
+    display: inline-block;
+    float: left;
+    width: 30.666666666666664%;
+    margin: 0 1.3333333333333335%;
+  }
+  #portfolio nav {
+    display: inline-block;
+    float: left;
+    width: 97.33333333333334%;
+    margin: 0 1.3333333333333335%;
+  }
+  #portfolio nav ul {
+    margin: 20px 0;
+  }
+  #gallery {
+    margin-top: 0;
+  }
+  #gallery li {
+    display: inline-block;
+    float: left;
+    width: 22.333333333333332%;
+    margin: 0 1.3333333333333335%;
+    margin-bottom: 1.25%;
+  }
+  #vid img {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  p {
+    font-size: 14px;
+  }
+  h1 {
+    margin: 50px;
+  }
+  #topbar nav a {
+    padding: 10px;
+  }
+  #topbar nav a.current {
+    padding: 5px 10px;
+  }
+  #twitter p,
+  #testimonials p {
+    font-size: 23px;
+    line-height: 40px;
+  }
+  #about nav {
+    font-size: 20px;
+  }
+  #about nav ul li {
+    margin: 0;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 30px 15px;
+  }
+  .col,
+  #gallery li {
+    display: inline-block;
+    float: left;
+    width: 97.33333333333334%;
+    margin: 0 1.3333333333333335%;
+    margin-bottom: 1.25%;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 23px;
+  }
+  #about nav ul li {
+    padding: 0;
+    margin: 3px;
+  }
+  #twitter p,
+  #testimonials p {
+    font-size: 23px;
+    line-height: 35px;
+  }
+  #topbar {
+    height: auto;
+  }
+  #topbar nav .fa-bars {
+    margin: 0 auto;
+    display: block;
+    color: white;
+    cursor: pointer;
+  }
+  #topbar nav ul.dropdown {
+    display: none;
+    text-align: left;
+  }
+  #topbar nav ul.dropdown li {
+    display: block;
+    margin: 10px;
+  }
+  #topbar nav ul.dropdown a {
+    color: white;
+    border: none;
+  }
+  #topbar nav ul.dropdown a:hover {
+    color: #fe5c32;
+    font-weight: 400;
+  }
+  #topbar nav ul.dropdown.open {
+    display: block;
+  }
+  #topbar nav a {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  #topbar nav h1 {
+    padding: 25px;
+  }
+  #services ul {
+    display: inline-block;
+    float: left;
+    width: 97.33333333333334%;
+    margin: 0 1.3333333333333335%;
+  }
+  .contact-1,
+  .contact-2 {
+    display: inline-block;
+    float: left;
+    width: 97.33333333333334%;
+    margin: 0 1.3333333333333335%;
+    margin-bottom: 10px;
+  }
+  input,
+  textarea {
+    margin: 0 0 10px 0;
+  }
+  button {
+    width: 100%;
+    padding: 15px 50px;
+  }
+}
+@media (max-width: 320px) {
+  #services ul {
+    color: #fff;
+  }
+}

@@ -1,0 +1,447 @@
+@import "variables.less";
+@import "mixins.less";
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,400italic);
+
+// GLOBAL
+//------------------------------------
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: 0;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  font: @base-font-size @font;
+  font-weight: 400;
+  line-height: 26px;
+  background-color: @white;
+  color: @grey;
+}
+
+// TYPE
+//------------------------------------
+
+h1, h2, h3, h4, h5 { 
+  font-weight: 500; 
+}
+
+h3 {
+  display: inline-block;
+  .type(@h3-font-size,normal,400);
+  padding: 0 0 0 0;
+  margin-bottom: 27px;
+  border-bottom: solid 2px @orange;
+}
+
+ul { 
+  padding: 0;
+  margin: 0;
+  li { display: inline-block; }
+}
+
+a { color: @white; }
+
+.fa {
+  color: @orange;
+  font-size: 25px;
+}
+
+h2 {
+  color:@white;
+  background-color: rgba(0,0,0,0.4);
+  font-size: 38px;
+  line-height:2em;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+}
+
+// SECTIONS
+//------------------------------------
+
+.container {
+  width: @total-width;
+  max-width: @gridsystem-width;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+section, header, footer {
+  width: 100%;
+}
+
+// Header
+//------------------------------------
+
+header {
+  height: 490px;
+  &.home { background: url('../img/banner-home.jpg') no-repeat; background-size: cover;}
+  &.about { background: url('../img/banner-about.jpg') no-repeat; background-size: cover;}
+  &.services { background: url('../img/banner-services.jpg') no-repeat; background-size: cover;}
+}
+
+#navbar { 
+  background-color: @white;
+  min-height: 90px;
+
+  .container { padding: 35px 0;}
+
+  ul { 
+    float: right; 
+    a { 
+      .type(@base-font-size, 12px, 500);
+      color: @dark-grey;
+      padding: 0 15px;
+      display: inline-block;
+      text-transform: uppercase;
+      &:hover { color: @orange; }
+      &.current {
+        color: @orange;
+      }
+    }
+  }
+  h1 { float: left; margin: 0;}
+  h1 a { 
+    color: @white;
+    text-transform: uppercase;
+    .brightE { color: @orange; }
+  }
+}
+
+nav .fa-bars {
+  display: none;
+}
+
+// Content
+//----------------------------
+
+.content {
+  .padding(55px, 0, 55px, 0);
+  background-color: @white;
+
+  ul { 
+    li {
+      .column(3);
+    }
+  }
+}
+
+#services li {
+  h4 {
+    .type(@h4-font-size,22px,300); 
+    margin: 20px 0;
+  }
+  p { 
+    .type(@tiny-font-size,19px,400); 
+    text-align: left;
+    padding: 0 20px;
+  }
+}
+
+#recent li {
+  background-color: @light-grey;
+  color: @dark-grey;
+  text-align: right;
+  border: #e0dddd solid 1px;
+  span { 
+    width: 90%;
+    display: block;
+    margin: 0 auto 15px auto;
+  }
+  h5 {
+    border-bottom: #e0dddd solid 1px;
+    padding: 0;
+    margin:0;
+    font-size: 16px;
+    color: @orange;
+  }
+  img {
+    width: 100%;
+    border-bottom: #e0dddd solid 1px;
+  }
+}
+
+.blurb {
+  font-size: @blurb-font-size;
+  margin-bottom: 33px;
+}
+
+h3, h4 {
+  color: @dark-grey;
+}
+
+
+// Promo
+//----------------------------
+
+#promo {
+  background-color: @orange;
+  color: @white;
+  font-size: @sub-head;
+  a {
+    color: @white;
+    border-bottom: @white solid 1px;
+    text-transform: uppercase;
+    &:hover { 
+      color: @grey; 
+      border-color: @grey;
+    }
+  }
+}
+
+// About
+//----------------------------
+
+.greybg {
+  background-color: #f6f6f6;
+}
+
+#team {
+  .position { color: @dark-grey; }
+    li {
+      .column(3);
+    }
+}
+
+.col {
+  .column(6);
+  text-align: left;
+  h3 {
+    margin: 0;
+  }
+}
+
+
+#guarantee {
+  .padding(25px, 0, 25px, 0);
+}
+// Footer
+//----------------------------
+
+footer {
+  color: @white;
+  background-color: @orange; 
+}
+
+
+// MEDIA QUERIES 
+//----------------------------
+// Portrait tablet and small desktops
+
+@media (max-width: 940px) {
+  .container {
+    padding: 40px 15px;
+  }
+
+  #topbar .container {
+    padding: 60px 15px;
+  }
+
+  h2 { 
+    font-size: @h3-font-size;
+  }
+
+  .header {
+    padding: 145px 0;
+  }
+
+// Default
+//----------------------------
+
+#default-copy { 
+  .column(12); 
+}
+#vid { 
+  .column(12);
+  margin-top: 50px;
+}
+
+// Portfolio
+//----------------------------
+
+#portfolio {
+  h3 { 
+    .column(4); 
+  }
+  nav {
+    .column(12);
+    ul {
+      margin: 20px 0;
+    }
+  }
+}
+
+#gallery {
+  margin-top: 0;
+  li {
+    .column(3);
+    margin-bottom: 1.25%;
+  }
+}
+
+#vid img { width: 100%; }
+}
+
+// Landscape phone to portrait tablet --------
+@media (max-width: 767px) {
+
+  p { font-size: 14px; }
+
+  h1 { margin: 50px; }
+
+  #topbar nav a {
+    padding: 10px;
+    &.current {
+      padding: 5px 10px;
+    }
+  }
+
+  #twitter p,
+  #testimonials p { 
+    font-size: @sub-head;
+    line-height: 40px;
+  }
+
+// about
+//----------------------------
+
+#about nav {
+  font-size: 20px;
+  ul li {
+    margin: 0;
+  }
+}
+
+
+}
+
+// Landscape phones and down
+@media (max-width: 480px) {
+
+  .container {
+    padding: 30px 15px;
+  }
+
+  .col, #gallery li { 
+    .column(12);
+    margin-bottom: 1.25%;
+  }
+
+  h2 {
+    font-size: @h4-font-size;
+  }
+
+  h3 {
+    font-size: @sub-head;
+  }
+
+  #about nav ul li {
+    padding: 0;
+    margin: 3px;
+  }
+
+  #twitter p,
+  #testimonials p { 
+    font-size: @sub-head;
+    line-height: 35px;
+  }
+
+
+// Navigation
+//----------------------------
+
+#topbar { 
+  height: auto;
+  nav {
+    .fa-bars {
+      margin:  0 auto;
+      display: block;
+      color: white;
+      cursor: pointer;
+    }
+    ul.dropdown {
+      display: none;
+      text-align: left;
+      li {
+        display: block;     
+        margin: 10px;
+      }
+      a {
+        color: white;
+        border: none;
+        &:hover {
+          color: @orange;
+          font-weight: 400; 
+        }
+      }
+      &.open {
+        display: block;
+      }
+    }
+    a { 
+      font-size: 12px;
+      padding: 5px 10px;
+    }
+    h1 {
+      padding: 25px;
+    }
+  }
+}
+
+// Service
+//----------------------------
+#services {
+  ul{
+    .column(12);
+  }
+}
+// Contact
+//----------------------------
+
+.contact-1, .contact-2 {
+  .column(12);
+  margin-bottom: 10px;
+}
+
+input, textarea {
+  margin: 0 0 10px 0;
+}
+
+button {
+  width: 100%;
+  padding: 15px 50px;
+}
+}
+
+// Portrait phone down
+@media (max-width: 320px) {
+
+// Service
+//----------------------------
+#services {
+  ul{
+    color:#fff;
+  }
+}
+}
+
+
+
+
+
+
+
+
+
