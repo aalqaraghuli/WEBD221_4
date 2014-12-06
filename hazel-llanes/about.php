@@ -1,6 +1,6 @@
 <?php 
-$page_title = "Studio New - About";
-include 'header.php';
+$page_title = "About";
+include "inc/header.php";
 ?>
 
 <h2>Who We Are</h2>
@@ -11,7 +11,8 @@ include 'header.php';
 <section class="content">
 	<div class="container">
 		<h3>About Us</h3>
-		<p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor  ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.  Lorem ipsum dolor       sit amet, consectetur adipisicing elit, sed do eiusmod tempor  ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor  ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.  </p>
+		<p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor  ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+		<p class="blurb">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.  Lorem ipsum dolor       sit amet, consectetur adipisicing elit, sed do eiusmod tempor  ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor  ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
 	</div>
 </section><!-- /about-->
 
@@ -19,11 +20,10 @@ include 'header.php';
 	<div class="container">
 		<h3>Our Team</h3>
 		<ul id="members" class="clearfix">
-			<li><i class="fa fa-th-list"></i><h4>Natalie</h4><span class="position">Project Manager</span><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua. </p></li>
-			<li><i class="fa fa-code"></i><h4>Natalie</h4><span class="position">Project Manager</span><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua. </p></li>
-			<li><i class="fa fa-location-arrow"></i><h4>Natalie</h4><span class="position">Project Manager</span><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua. </p></li>
-			<li><i class="fa fa-phone"></i><h4>Natalie</h4><span class="position">Project Manager</span><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua. </p></li>
-
+			<li><div class="member-img"><img src="img/beyonce.jpg" alt="beyonce"></div><h4>Beyonce</h4><span class="position">The Boss</span><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua. </p></li>
+			<li><div class="member-img"><img src="img/beyonce.jpg" alt="beyonce"></div><h4>Beyonce</h4><span class="position">Diva</span><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua. </p></li>
+			<li><div class="member-img"><img src="img/beyonce.jpg" alt="beyonce"></div><h4>Beyonce</h4><span class="position">Queen Bee</span><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua. </p></li>
+			<li><div class="member-img"><img src="img/beyonce.jpg" alt="beyonce"></div><h4>Beyonce</h4><span class="position">Superstar</span><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eturet dolore magna aliqua. </p></li>
 		</ul>
 	</div>
 </section><!-- /team -->

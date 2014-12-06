@@ -20,6 +20,9 @@ body {
   background-color: #ffffff;
   color: #9d9c9c;
 }
+img {
+  width: 100%;
+}
 h1,
 h2,
 h3,
@@ -52,11 +55,13 @@ a {
 }
 h2 {
   color: #ffffff;
+  display: inline-block;
   background-color: rgba(0, 0, 0, 0.4);
   font-size: 38px;
   line-height: 2em;
   letter-spacing: 1px;
   padding: 10px 20px;
+  margin: 0;
 }
 .container {
   width: 100%;
@@ -72,7 +77,8 @@ footer {
   width: 100%;
 }
 header {
-  height: 490px;
+  padding: 140px 0 0 0;
+  min-height: 490px;
 }
 header.home {
   background: url('../img/banner-home.jpg') no-repeat;
@@ -85,6 +91,10 @@ header.about {
 header.services {
   background: url('../img/banner-services.jpg') no-repeat;
   background-size: cover;
+}
+header p {
+  color: #ffffff;
+  font-weight: 300;
 }
 #navbar {
   background-color: #ffffff;
@@ -161,8 +171,8 @@ nav .fa-bars {
 }
 #recent li h5 {
   border-bottom: #e0dddd solid 1px;
-  padding: 0;
-  margin: 0;
+  padding: 0 0 5px 0;
+  margin: 0 0 5px 0;
   font-size: 16px;
   color: #fe5c32;
 }
@@ -198,11 +208,29 @@ h4 {
 #team .position {
   color: #414141;
 }
-#team li {
+#team ul {
+  margin-bottom: 20px;
+}
+#team ul li {
   display: inline-block;
   float: left;
   width: 22.333333333333332%;
   margin: 0 1.3333333333333335%;
+}
+#team h4 {
+  margin: 0;
+}
+#team .position {
+  color: #9d9c9c;
+}
+.member-img {
+  border: 1px solid #c8c9c9;
+  border-radius: 50%;
+  display: inline-block;
+}
+.member-img img {
+  border-radius: 50%;
+  display: block;
 }
 .col {
   display: inline-block;
@@ -231,77 +259,67 @@ footer {
   h2 {
     font-size: 28px;
   }
-  .header {
-    padding: 145px 0;
-  }
-  #default-copy {
+  #team ul li,
+  .content ul li {
     display: inline-block;
     float: left;
-    width: 97.33333333333334%;
+    width: 47.333333333333336%;
     margin: 0 1.3333333333333335%;
-  }
-  #vid {
-    display: inline-block;
-    float: left;
-    width: 97.33333333333334%;
-    margin: 0 1.3333333333333335%;
-    margin-top: 50px;
-  }
-  #portfolio h3 {
-    display: inline-block;
-    float: left;
-    width: 30.666666666666664%;
-    margin: 0 1.3333333333333335%;
-  }
-  #portfolio nav {
-    display: inline-block;
-    float: left;
-    width: 97.33333333333334%;
-    margin: 0 1.3333333333333335%;
-  }
-  #portfolio nav ul {
-    margin: 20px 0;
-  }
-  #gallery {
-    margin-top: 0;
-  }
-  #gallery li {
-    display: inline-block;
-    float: left;
-    width: 22.333333333333332%;
-    margin: 0 1.3333333333333335%;
-    margin-bottom: 1.25%;
-  }
-  #vid img {
-    width: 100%;
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 767px) {
+  .col {
+    display: inline-block;
+    float: left;
+    width: 97.33333333333334%;
+    margin: 0 1.3333333333333335%;
+  }
   p {
     font-size: 14px;
   }
   h1 {
-    margin: 50px;
+    width: 100%;
   }
-  #topbar nav a {
-    padding: 10px;
+  #navbar ul {
+    float: none;
   }
-  #topbar nav a.current {
+  nav .fa-bars {
+    text-align: center;
+    display: block;
+    padding: 20px 0;
+    cursor: pointer;
+  }
+  nav .fa-bars.current {
     padding: 5px 10px;
   }
-  #twitter p,
-  #testimonials p {
-    font-size: 23px;
-    line-height: 40px;
+  nav ul.dropdown {
+    display: none;
   }
-  #about nav {
-    font-size: 20px;
+  nav ul.dropdown li {
+    display: block;
+    border-top: 1px solid white;
   }
-  #about nav ul li {
-    margin: 0;
+  nav ul.dropdown a {
+    color: white;
+    padding-left: 15px;
+  }
+  nav ul.dropdown a:hover {
+    color: #444;
+  }
+  nav ul.dropdown.open {
+    display: block;
   }
 }
 @media (max-width: 480px) {
+  #team ul li,
+  .content ul li {
+    display: inline-block;
+    float: left;
+    width: 97.33333333333334%;
+    margin: 0 1.3333333333333335%;
+    margin-bottom: 20px;
+  }
   .container {
     padding: 30px 15px;
   }
@@ -319,23 +337,8 @@ footer {
   h3 {
     font-size: 23px;
   }
-  #about nav ul li {
-    padding: 0;
-    margin: 3px;
-  }
-  #twitter p,
-  #testimonials p {
-    font-size: 23px;
-    line-height: 35px;
-  }
   #topbar {
     height: auto;
-  }
-  #topbar nav .fa-bars {
-    margin: 0 auto;
-    display: block;
-    color: white;
-    cursor: pointer;
   }
   #topbar nav ul.dropdown {
     display: none;
@@ -360,34 +363,7 @@ footer {
     font-size: 12px;
     padding: 5px 10px;
   }
-  #topbar nav h1 {
-    padding: 25px;
-  }
-  #services ul {
-    display: inline-block;
-    float: left;
-    width: 97.33333333333334%;
-    margin: 0 1.3333333333333335%;
-  }
-  .contact-1,
-  .contact-2 {
-    display: inline-block;
-    float: left;
-    width: 97.33333333333334%;
-    margin: 0 1.3333333333333335%;
-    margin-bottom: 10px;
-  }
-  input,
-  textarea {
-    margin: 0 0 10px 0;
-  }
-  button {
-    width: 100%;
-    padding: 15px 50px;
-  }
 }
 @media (max-width: 320px) {
-  #services ul {
-    color: #fff;
-  }
+  
 }

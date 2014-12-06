@@ -1,10 +1,10 @@
 <?php 
-$page_title = "Studio New - Services";
-include 'header.php';
+$page_title = "Services";
+include "inc/header.php";
 ?>
 
 <h2>What We Do</h2>
-<p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor  ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.  Lorem ipsum dolor       sit amet, consectetur adipisicing elit, sed do eiusmod tempor  ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor  ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.  </p>
+<p class="blurb">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio nihil impedit quo facilis est et expedita distinctio minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.</p>
 </div>
 </header><!-- /header -->
 
@@ -44,10 +44,10 @@ include 'header.php';
 	<div class="container">
 		<h3>Our Clients</h3>
 		<ul id="clients" class="clearfix">
-			<li><img src="#" alt=""></li>
-			<li><img src="#" alt=""></li>
-			<li><img src="#" alt=""></li>
-			<li><img src="#" alt=""></li>
+			<li><img src="img/logo.png" alt="logo" width="166" height="43"></li>
+			<li><img src="img/logo.png" alt="logo" width="166" height="43"></li>
+			<li><img src="img/logo.png" alt="logo" width="166" height="43"></li>
+			<li><img src="img/logo.png" alt="logo" width="166" height="43"></li>
 		</ul><!-- /clients -->
 	</div>
 </section>
