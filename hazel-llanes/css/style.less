@@ -23,7 +23,7 @@
 
 body {
   font: @base-font-size @font;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 26px;
   background-color: @white;
   color: @grey;
@@ -38,15 +38,28 @@ h1, h2, h3, h4, h5 {
   font-weight: 500; 
 }
 
+h2 {
+  .type(@h2-font-size,1em,300);
+  color:@white;
+  padding: 0;
+  margin: 0;
+}
+
 h3 {
-  display: inline-block;
   .type(@h3-font-size,normal,400);
+  display: inline-block;
   padding: 0 0 0 0;
-  margin-bottom: 27px;
+  margin: 0 0 27px 0;
   border-bottom: solid 2px @orange;
+  color: @dark-grey;
+}
+
+h4 {
+  color: @dark-grey;
 }
 
 ul { 
+  list-style-type: none;
   padding: 0;
   margin: 0;
   li { display: inline-block; }
@@ -56,18 +69,11 @@ a { color: @white; }
 
 .fa {
   color: @orange;
-  font-size: 25px;
+  font-size: @h2-font-size-home;
 }
 
-h2 {
-  color:@white;
-  display: inline-block;
-  background-color: rgba(0,0,0,0.4);
-  font-size: 38px;
-  line-height:2em;
-  letter-spacing: 1px;
-  padding: 10px 20px;
-  margin: 0;
+.emphasis {
+  color: @orange;
 }
 
 // SECTIONS
@@ -86,68 +92,125 @@ section, header, footer {
   width: 100%;
 }
 
-// Header
-//------------------------------------
-
-header {
-  padding: 140px 0 0 0;
-  min-height: 490px;
-  &.home { background: url('../img/banner-home.jpg') no-repeat; background-size: cover;}
-  &.about { background: url('../img/banner-about.jpg') no-repeat; background-size: cover;}
-  &.services { background: url('../img/banner-services.jpg') no-repeat; background-size: cover;}
-  p {
-    color: @white;
-    font-weight: 300;
+.content {
+  padding: 35px 0 35px 0;
+  background-color: @white;
+  ul { 
+    li {
+      .column(3);
+      margin-bottom: 20px;
+    }
   }
 }
 
+.greybg { background-color: #f6f6f6; }
+
+// Navbar
+//------------------------------------
+
 #navbar { 
   background-color: @white;
-  min-height: 90px;
 
-  .container { padding: 35px 0;}
+  .container { padding: 30px 0;}
+  
+  h1 { 
+    background: url(../img/logo.png) no-repeat;
+    width: 129px;
+    height: 18px; 
+    float: left; 
+    border: 0; 
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    display: block;
+  }
 
   ul { 
     float: right; 
-    a { 
-      .type(@base-font-size, 12px, 500);
-      color: @dark-grey;
-      padding: 0 15px;
-      display: inline-block;
-      text-transform: uppercase;
-      &:hover { color: @orange; }
-      &.current {
-        color: @orange;
-      }
-    }
+    li { margin: 0 15px; }
   }
 
-  h1 a { 
-    color: @white;
+  a { 
+    .type(14px, 12px, 500);
+    color: @dark-grey;
+    padding: 0 0 5px 0;
+    display: inline-block;
     text-transform: uppercase;
-    .brightE { color: @orange; }
-  }
+    position: relative;
+    &:hover { color: @orange; }
+    &.current { 
+      border-bottom: 2px solid @orange; 
+      &:after {
+        content:"";
+        width:0;
+        height:0;
+        border-top: 5px solid @orange;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        position: absolute;
+        bottom: -7px;
+        left: 45%;
+      }
+    }
+  } 
 }
 
 nav .fa-bars {
   display: none;
 }
 
-// Content
+// Header
+//------------------------------------
+
+header {
+  padding: 125px 0 160px 0;
+
+  &.about { background: url('../img/banner-about.jpg') no-repeat; background-size: cover;}
+  &.services { background: url('../img/banner-services.jpg') no-repeat; background-size: cover;}
+  &.home { 
+    background: url('../img/banner-home.jpg') no-repeat; background-size: cover;
+    padding: 200px 30% 170px 30%;
+    h2, h3 {
+      color: @white;
+      background-color: rgba(0,0,0,0.4);
+      display: inline-block;
+      border:0;
+      letter-spacing: 1px;  
+    }
+    h2 { .type(@h2-font-size-home, normal, 400); margin: 0 0 20px 0; padding: 10px 60px; }
+    h3 { .type(@h4-font-size, normal, 300); margin: 0; color: #d8dbdb; padding: 10px 90px; }
+  }
+  
+  p {
+    color: @white;
+    font-weight: 300;
+    padding: 0 100px;
+    margin: 20px 0 0 0;
+  }
+}
+
+// Home
 //----------------------------
 
-.content {
-  .padding(55px, 0, 55px, 0);
-  background-color: @white;
-
-  ul { 
-    li {
-      .column(3);
+#promo {
+  .type(19px, normal, 300);
+  background-color: @orange;
+  color: @white;
+  letter-spacing: 1px;
+  p { margin: 36px 0; }
+  a {
+    color: @white;
+    border-bottom: @white solid 1px;
+    text-transform: uppercase;
+    font-weight: 400;
+    &:hover { 
+      color: @dark-grey; 
+      border-color: @dark-grey;
     }
   }
 }
 
-#services li {
+#whatwedo li {
   h4 {
     .type(@h4-font-size,22px,300); 
     margin: 20px 0;
@@ -167,13 +230,14 @@ nav .fa-bars {
   span { 
     width: 90%;
     display: block;
-    margin: 0 auto 15px auto;
+    margin: 0 auto 5px auto;
+    .type(@tiny-font-size,normal,300);
   }
   h5 {
     border-bottom: #e0dddd solid 1px;
     padding: 0 0 5px 0;
-    margin:0 0 5px 0;
-    font-size: 16px;
+    margin: 0 0 5px 0;
+    font-size: @blurb-font-size;
     color: @orange;
   }
   img {
@@ -182,40 +246,63 @@ nav .fa-bars {
   }
 }
 
+
 .blurb {
   font-size: @blurb-font-size;
   margin-bottom: 33px;
 }
 
-h3, h4 {
-  color: @dark-grey;
-}
-
-
-// Promo
+// Services
 //----------------------------
 
-#promo {
-  background-color: @orange;
-  color: @white;
-  font-size: @sub-head;
-  a {
-    color: @white;
-    border-bottom: @white solid 1px;
-    text-transform: uppercase;
-    &:hover { 
-      color: @grey; 
-      border-color: @grey;
+#clients img {
+  width: auto;
+}
+
+#services li {
+  border: 1px solid @light-grey;
+  padding: 15px;
+  margin-top: 20px;
+  position: relative;
+  h4 { text-transform: uppercase; }
+  p { text-align: left; }
+  a { 
+    color: @orange; 
+    &:hover { color: @dark-grey; }
+    }
+}
+
+.icon {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;    
+    background-color: @white;
+    border: 1px solid @light-grey;
+    padding: 10px;
+    position: absolute;
+    left: 40%;
+    top: -25px;
+}
+
+#features {
+  h4 { 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+  }
+  li {
+    color: #757575;
+    display: block;
+    &:before {    
+      font-family: "FontAwesome";
+      content: "\f00c";
+      margin: 0 15px 0 0px;
+      color: #2ed72e;
     }
   }
 }
 
 // About
 //----------------------------
-
-.greybg {
-  background-color: #f6f6f6;
-}
 
 #team {
   .position { color: @dark-grey; }
@@ -225,6 +312,8 @@ h3, h4 {
       .column(3);
     }
   }
+
+  p { .type(@tiny-font-size, 19px, 400); }
 
   h4 { margin: 0; }
   .position { color: @grey; }
@@ -249,8 +338,9 @@ h3, h4 {
 }
 
 #guarantee {
-  .padding(25px, 0, 25px, 0);
+  padding: 25px 0 25px 0;
 }
+
 // Footer
 //----------------------------
 
@@ -265,143 +355,105 @@ footer {
 // Portrait tablet and small desktops
 
 @media (max-width: 940px) {
-  .container {
-    padding: 40px 15px;
+
+  h2 { font-size: 32px; }
+  h3 { font-size: 18px; }
+
+  header,
+  header.home {
+    padding: 20px 0;
+    p { padding: 0 10px; }
   }
+  .content { padding: 10px 0 0 0; } 
+  .container { padding: 10px 15px; }
 
   #topbar .container {
     padding: 60px 15px;
   }
 
-  h2 { 
-    font-size: @h3-font-size;
-  }
-
-
-  #team ul li, .content ul li {
+  #team ul li, 
+  .content ul li {
     .column(6);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 
-// Landscape phone to portrait tablet --------
+// Landscape phone to portrait tablet
 @media (max-width: 767px) {
 
-
-  .col {
-    .column(12);
-  }
-
-
   p { font-size: 14px; }
-
-  h1 { 
-    width: 100%;
-  }
+  h1 { margin: 0 auto; }
+  .blurb { font-size: 14px; }
   
-  #navbar ul { float: none;}
+  #whatwedo li p,
+  #team p {
+    .type(@base-font-size,22px,300);
+    padding: 0; 
+  }
+
+  .col { .column(12); }
+
+  h1, #navbar ul { float: none !important; }
+  #navbar { 
+    text-align: center; 
+    ul li { 
+      width: 100%; 
+      margin:0 ; 
+      padding:0; 
+    }
+    a { 
+      font-size: @h4-font-size;
+      letter-spacing: 1px;
+      padding: 20px 0;
+      margin: 0;
+      width: 100%;
+      &.current { 
+        background-color: @orange; 
+        color: @white;
+        border: 0;
+      }
+      &:after { display: none; }
+      &:hover { background-color: @orange; color: @white;}
+    }
+  }
+
   nav .fa-bars {
     text-align: center;
     display: block;
-    padding: 20px 0;
+    padding: 30px 0 20px 0;
     cursor: pointer;    
-    &.current {
-      padding: 5px 10px;
-    }
   }
-  
-    nav ul.dropdown {
+  nav ul.dropdown {
     display: none;
   }
-
-    nav ul.dropdown li {
+  nav ul.dropdown li {
     display: block;
     border-top: 1px solid white;
-  }
-  nav ul.dropdown a {
-    color: white;
-    padding-left: 15px;
-  }
-  nav ul.dropdown a:hover {
-    color: #444;
   }
   nav ul.dropdown.open {
     display: block;
   }
-
-
 }
 
 // Landscape phones and down
 @media (max-width: 480px) {
 
+  h3 { font-size: @h4-font-size; }
+  h2 { font-size: @h3-font-size; }
+  header.home h2 { font-size: 19px; padding: 5px 20px; }
+  header.home h3 { font-size: 16px; padding: 5px 20px; }
+  
+  .container { padding: 10px 5px; }
+  
+  #promo p { margin: 5px 0; }
+
+  header {
+    padding: 10px 0;
+    p { padding: 0 10px; }
+  }
+
   #team ul li, 
   .content ul li {
     .column(12);
-    margin-bottom: 20px;
-  }
-
-  .container {
-    padding: 30px 15px;
-  }
-
-  .col, #gallery li { 
-    .column(12);
-    margin-bottom: 1.25%;
-  }
-
-  h2 {
-    font-size: @h4-font-size;
-  }
-
-  h3 {
-    font-size: @sub-head;
-  }
-
-// Navigation
-//----------------------------
-
-#topbar { 
-  height: auto;
-  nav {
-    ul.dropdown {
-      display: none;
-      text-align: left;
-      li {
-        display: block;     
-        margin: 10px;
-      }
-      a {
-        color: white;
-        border: none;
-        &:hover {
-          color: @orange;
-          font-weight: 400; 
-        }
-      }
-      &.open {
-        display: block;
-      }
-    }
-    a { 
-      font-size: 12px;
-      padding: 5px 10px;
-    }
   }
 }
-
-}
-
-// Portrait phone down
-@media (max-width: 320px) {
-
-}
-
-
-
-
-
-
-
-
-
